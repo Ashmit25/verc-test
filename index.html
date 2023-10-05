@@ -7,7 +7,20 @@
     <link rel="stylesheet" href="index.css" />
 </head>
 <body>
+    <script>
+        window.count = 0
+        function showInput() {
+         var name1 = document.getElementById("name").value;
+         result = name1 + " added to cart ";
+         document.getElementById("spanResult").textContent = result;
+        }
+    </script>
     <h1>Hello World</h1>
-    <a href="app.html">Other</a>
+    <a href="app.html">Other</a><br>
+    
+    Enter number: <input type="number" id="name" placeholder="1" />
+    <br>
+    <button id="submit" onclick="showInput(); count = document.getElementById('name').value; console.log(count)">Submit</button>
+    <span id="spanResult"></span>
 </body>
 </html>
